@@ -45,9 +45,14 @@ def check_diagonal_left(board, player):
 
 def check_diagonal_right(board, player):
 
-  for x in range(2, -1, -1):
-    if board[x][x] != player:
+  x = 0
+  y = 2
+
+  while x < 3:
+    if board[x][y] != player:
       return False
+    x += 1
+    y -= 1
 
   return True
 
